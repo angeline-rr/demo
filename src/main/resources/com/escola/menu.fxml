@@ -1,24 +1,62 @@
-package ControladorGeral;
+<?xml version="1.0" encoding="UTF-8"?>
 
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-public class java {
 
-    @FXML
-    private Button BotaoAdicionar;
-
-    @FXML
-    private Button BotaoBuscarCpf;
-
-    @FXML
-    private Button BotaoBuscarNome;
-
-    @FXML
-    private Button BotaoListar;
-
-    @FXML
-    private Button BotaoRemover;
-
-}
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #483D8B;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControladorGeral.java">
+   <children>
+      <Text fill="WHITE" layoutX="14.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edição de Dados do Aluno" wrappingWidth="351.13671875">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Text>
+      <VBox layoutX="8.0" layoutY="79.0" prefHeight="158.0" prefWidth="192.0" spacing="15.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Opções:" wrappingWidth="191.396484375">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="botaoAdicionar" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: #D8BFD8;" text="Adicionar" />
+            <Button fx:id="botaoRemover" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" style="-fx-background-color: #D8BFD8;" text="Remover" />
+            <Button fx:id="botaoListar" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: #D8BFD8;" text="Listar" />
+         </children>
+      </VBox>
+      <HBox layoutX="8.0" layoutY="237.0" prefHeight="70.0" prefWidth="236.0">
+         <children>
+            <VBox prefHeight="70.0" prefWidth="123.0" spacing="15.0">
+               <children>
+                  <TextField maxWidth="120.0" prefHeight="25.0" prefWidth="102.0" />
+                  <TextField maxWidth="120.0" prefHeight="21.0" prefWidth="150.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="70.0" prefWidth="109.0" spacing="15.0">
+               <children>
+                  <Button fx:id="botaoBuscarNome" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" style="-fx-background-color: #D8BFD8;" text="Buscar por Nome" />
+                  <Button fx:id="botaoBuscarCpf" mnemonicParsing="false" style="-fx-background-color: #D8BFD8;" text="Buscar por CPF" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="284.0" layoutY="79.0" prefHeight="253.0" prefWidth="302.0">
+         <children>
+            <TableView fx:id="alunoTableView" prefHeight="251.0" prefWidth="302.0" style="-fx-background-color: #D8BFD8;">
+              <columns>
+                <TableColumn fx:id="nomeColuna" prefWidth="68.0" style="-fx-background-color: #FFF0F5;" text="Nome" />
+                <TableColumn fx:id="cpfColuna" prefWidth="68.0" style="-fx-background-color: #FFF0F5;" text="CPF" />
+                  <TableColumn fx:id="emailColuna" prefWidth="69.0" style="-fx-background-color: #FFF0F5;" text="Email" />
+                  <TableColumn fx:id="anoColuna" prefWidth="95.0" style="-fx-background-color: #FFF0F5;" text="Ano de Nasc." />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
