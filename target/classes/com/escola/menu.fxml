@@ -1,0 +1,24 @@
+package ControladorGeral;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+
+public class java {
+
+    @FXML
+    private Button BotaoAdicionar;
+
+    @FXML
+    private Button BotaoBuscarCpf;
+
+    @FXML
+    private Button BotaoBuscarNome;
+
+    @FXML
+    private Button BotaoListar;
+
+    @FXML
+    private Button BotaoRemover;
+
+}
+
